@@ -3,12 +3,13 @@ plugins {
 }
 
 repositories {
-    maven("http://maven-repo2.iggroup.local:8081/nexus/content/groups/public")
+    mavenCentral()
+    jcenter()
 }
 
 dependencies {
-//    implementation("com.android.tools.build:gradle:4.0.2")
-//    implementation("com.android.tools.build:gradle:4.1.0-alpha07")
-    implementation("com.android.tools.build:gradle:4.1.0-alpha08")
-//    implementation("com.android.tools.build:gradle:4.1.0")
+//    implementation("com.android.tools.build:gradle:4.0.2")  // <-- WORKS
+//    implementation("com.android.tools.build:gradle:4.1.0-alpha07") // <-- WORKS
+    implementation("com.android.tools.build:gradle:4.1.0-alpha08") // <-- DOES NOT WORK
+//    implementation("com.android.tools.build:gradle:4.1.0") // <-- DOES NOT WORK
 }

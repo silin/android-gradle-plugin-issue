@@ -2,15 +2,13 @@
 buildscript {
     ext.kotlin_version = "1.4.10"
     repositories {
-        maven {
-          url = "http://maven-repo2.iggroup.local:8081/nexus/content/groups/public"
-        }
+        mavenCentral()
     }
     dependencies {
-//        classpath "com.android.tools.build:gradle:4.0.2"
-//        classpath "com.android.tools.build:gradle:4.1.0-alpha07"
-        classpath "com.android.tools.build:gradle:4.1.0-alpha08"
-//        classpath "com.android.tools.build:gradle:4.1.0"
+//        classpath "com.android.tools.build:gradle:4.0.2" // <-- WORKS
+//        classpath "com.android.tools.build:gradle:4.1.0-alpha07" // <--WORKS
+        classpath "com.android.tools.build:gradle:4.1.0-alpha08" // <-- DOES NOT WORK
+//        classpath "com.android.tools.build:gradle:4.1.0" // <-- WORKS
 
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
@@ -21,9 +19,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven {
-          url = "http://maven-repo2.iggroup.local:8081/nexus/content/groups/public"
-        }
+        mavenCentral()
     }
 }
 
