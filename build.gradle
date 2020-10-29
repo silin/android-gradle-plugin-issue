@@ -2,13 +2,14 @@
 buildscript {
     ext.kotlin_version = "1.4.10"
     repositories {
-        mavenCentral()
+        google()
+        jcenter()
     }
     dependencies {
 //        classpath "com.android.tools.build:gradle:4.0.2" // <-- WORKS
 //        classpath "com.android.tools.build:gradle:4.1.0-alpha07" // <--WORKS
         classpath "com.android.tools.build:gradle:4.1.0-alpha08" // <-- DOES NOT WORK
-//        classpath "com.android.tools.build:gradle:4.1.0" // <-- WORKS
+//        classpath "com.android.tools.build:gradle:4.1.0" // <-- DOES NOT WORK
 
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
@@ -19,7 +20,8 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenCentral()
+        google()
+        jcenter()
     }
 }
 
